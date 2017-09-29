@@ -1,2 +1,0 @@
-1、再PyCharm中创建django项目
-2、用命令python manage.py startapp cmdb创建对应的模块
