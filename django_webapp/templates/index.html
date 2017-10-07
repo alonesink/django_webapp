@@ -2,9 +2,31 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>test</title>
 </head>
+<script src="/static/jquery/jquery-3.2.1.js"></script>
 <body>
-    <div>Hello World!</div>
+    <h1>用户输入</h1>
+    <form action="/index/" method="post">
+        <input type="text" name="username">
+        <input type="password" name="password">
+        <input type="submit" value="提交">
+    </form>
+
+    <table border="1">
+        <thead>
+            <th>用户名</th>
+            <th>密码</th>
+        </thead>
+        <tbody>
+            {% for foo in data %}
+                <tr>
+                    <td>{{ foo.user }}</td>
+                    <td>{{ foo.pwd }}</td>
+                </tr>
+            {% endfor %}
+            
+        </tbody>
+    </table>
 </body>
 </html>
